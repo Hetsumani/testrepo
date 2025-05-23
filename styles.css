@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "rasa", serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1.25em 0;
+    position: relative; /* Necesario para posicionar el ::before correctamente */
+}
+
+    header .logo {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px; /* Grosor de la línea */
+        background-color: white; /* Color de la línea */
+    }
+
+h1 {
+    font-family: "adelphi-pe-variable", sans-serif;
+    font-variation-settings: "opsz" 6, "slnt" 0, "wght" 700;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75em, 1fr));
+    justify-content: center;
+    gap: 1.25em;
+    padding: 0 1.25em;
+}
+
+.alumno {
+    display: grid;
+    grid-template-rows: 5fr 3fr;
+    background-color: #4e5ed2;
+    border-radius: 0;
+    transition: background-color 0.3s, border-radius 0.4s;
+}
+
+    .alumno:hover {
+        background-color: #475070;
+        border-radius: 1em;
+    }
+
+    .alumno .text {
+        display: flex;
+        flex-direction: column;
+        padding: 0.625em;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25em;
+    }
+
+    .alumno h1 {
+        font-family: "adelphi-pe-variable", sans-serif;
+        font-variation-settings: "opsz" 6, "slnt" 0, "wght" 700;
+        color: #f0e6da;
+        text-align: center;
+    }
+
+    .alumno a, .boton {
+        font-family: "adelphi-pe-variable", sans-serif;
+        font-variation-settings: "opsz" 6, "slnt" 0, "wght" 500;
+        display: inline-block; /* Para que se vea como botón */
+        background-color: #9ed75a; /* Azul cielo */
+        color: black; /* Texto en negro */
+        padding: 0.625em 1.25em; /* Espacio interno */
+        border-radius: 0.5em; /* Bordes redondeados */
+        text-decoration: none; /* Sin subrayado */
+        font-weight: bold; /* Texto en negrita */
+        text-align: center; /* Centrar el texto */
+        transition: background-color 0.3s; /* Suaviza el cambio de color al pasar el mouse */
+        width: 30%;
+    }
+
+        .alumno a:hover, .boton:hover {
+            background-color: #00BFFF; /* Color más oscuro al pasar el mouse */
+        }
+
+    .alumno .image {
+        background-image: url("images/background_01.webp");
+        background-size: cover;
+        overflow: hidden;
+        max-height: 350px;
+    }
+
+        .alumno .image img {
+            width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+            object-fit: cover; /* Escala la imagen para cubrir el contenedor sin deformarla */
+        }
+
+.hero {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    height: 85vh;
+}
+
+    .hero .image {
+        background-image: url("images/heroimage.webp");
+        background-size: cover;
+    }
+
+    .hero .text {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 2.5em;
+        gap: 1.25em;
+    }
+
+.title {
+    text-align: center;
+    padding: 3.125em 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.125em;
+    font-size: 1.5em;
+}
+
+.link_imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 1.25em;
+    padding: 1.25em 0;
+}
+
+.link_imagenes a{
+    text-decoration: none;
+    background-color: #9ed75a;
+    border-radius: 2em;
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+    transition: background-color 0.3s;
+    padding: 1em;
+}
+
+    .link_imagenes a:hover {
+        background-color: #00BFFF;
+}
